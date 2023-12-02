@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 
 // Endpoint to handle incoming sensor data
-app.post("/sensor-data", (req, res) => {
+app.post("/", (req, res) => {
   const { temperature, humidity } = req.body; // Assuming JSON data contains temperature and humidity
 
   const dataToSave = { temperature, humidity, timestamp: new Date() };
