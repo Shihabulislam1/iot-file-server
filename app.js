@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.post("/", (req, res) => {
   const tempData = req.body; // Assuming JSON data contains temperature and humidity
 
-  const dataToSave = { data:{tempData}, timestamp: new Date() };
+  const dataToSave = { data:`tempData`, timestamp: new Date() };
   const directoryPath = path.join(__dirname, "public"); // Path to your public folder
 
   // Ensure the 'public' directory exists; if not, create it
