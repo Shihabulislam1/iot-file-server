@@ -9,9 +9,9 @@ app.use(bodyParser.json());
 
 // Endpoint to handle incoming sensor data
 app.post("/", (req, res) => {
-  const { temperature, humidity } = req.body; // Assuming JSON data contains temperature and humidity
+  const tempData = req.body; // Assuming JSON data contains temperature and humidity
 
-  const dataToSave = { temperature, humidity, timestamp: new Date() };
+  const dataToSave = { data:{tempData}, timestamp: new Date() };
   const directoryPath = path.join(__dirname, "public"); // Path to your public folder
 
   // Ensure the 'public' directory exists; if not, create it
