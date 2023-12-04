@@ -6,7 +6,10 @@ const app = express();
 
 // Middleware to parse JSON body
 app.use(bodyParser.json());
-
+// get method to deliver simple text to the browser
+app.get("/", (req, res) => {
+  res.send("Hello From Zishan!");
+});
 // Endpoint to handle incoming sensor data
 app.post("/", (req, res) => {
   const tempData = req.body; // Assuming JSON data contains temperature and humidity
