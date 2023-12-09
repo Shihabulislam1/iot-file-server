@@ -1,11 +1,14 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const cors = require("cors"); // Import the 'cors' package
 const Blockchain = require("./conroller/main");
 const Block = require("./conroller/block"); // Import Block class from controller/block.js
 
 const app = express();
 
 app.use(bodyParser.json());
+app.use(cors()); // Use CORS middleware
+
 // Initialize the blockchain outside of the endpoint handler
 let edgeCoin = new Blockchain();
 
@@ -65,6 +68,61 @@ app.get("/blocks/:hash", (req, res) => {
     res.status(200).json({ block });
   } else {
     res.status(404).json({ message: "Block not found" });
+  }
+});
+
+// Get average mining time for all blocks
+app.get("/average-mining-time", (req, res) => {
+  try {
+    const blockchainData = edgeCoin.chain; // Access blockchain data from edgeCoin instance
+
+    const totalBlocks = blockchainData.length;
+
+    // Calculate total mining time for all blocks
+    const totalMiningTime = blockchainData.reduce(
+      (acc, block) => acc + block.miningTime,
+      0
+    );
+
+    // Calculate average mining time
+    const averageMiningTime =
+      totalBlocks > 0 ? (totalMiningTime / totalBlocks).toFixed(2) : 0;
+
+    res.status(200).json({ averageMiningTime });
+  } catch (error) {
+    res.status(500).json({ error: "Error reading blockchain data" });
+  }
+});
+
+app.get("/power-consumption", (req, res) => {
+  try {
+    const blockchainData = edgeCoin.chain; // Access blockchain data from edgeCoin instance
+
+    const totalBlocks = blockchainData.length;
+
+    // Calculate total mining time for all blocks
+    const totalMiningTime = blockchainData.reduce(
+      (acc, block) => acc + block.miningTime,
+      0
+    );
+
+    // Calculate average mining time
+    const totalPower = ((15 * totalMiningTime) / 1000).toFixed(2);
+
+    res.status(200).json({ totalPower });
+  } catch (error) {
+    res.status(500).json({ error: "Error reading blockchain data" });
+  }
+});
+
+// Get nonce number of the last block
+app.get("/last-block-nonce", (req, res) => {
+  try {
+    const lastBlock = edgeCoin.chain[edgeCoin.chain.length - 1];
+    const lastBlockNonce = lastBlock ? lastBlock.nonce : null;
+    res.status(200).json({ lastBlockNonce });
+  } catch (error) {
+    res.status(500).json({ error: "Error reading blockchain data" });
   }
 });
 
