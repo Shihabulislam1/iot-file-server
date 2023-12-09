@@ -126,6 +126,16 @@ app.get("/last-block-nonce", (req, res) => {
   }
 });
 
+app.get("/last-block-index", (req, res) => {
+  try {
+    const lastBlock = edgeCoin.chain[edgeCoin.chain.length - 1];
+    const lastBlockIndex = lastBlock ? lastBlock.index : null;
+    res.status(200).json({ lastBlockIndex });
+  } catch (error) {
+    res.status(500).json({ error: "Error reading blockchain data" });
+  }
+})
+
 app.post("/", (req, res) => {
   const tempData = req.body; // Assuming JSON data contains temperature and humidity
 
