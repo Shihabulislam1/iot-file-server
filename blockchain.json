@@ -760,5 +760,242 @@
         "hash": "00003f91516fb65732ccdae3e4e0a2d809793416e3c8f6aa1a6a2b7caa9949f0",
         "nonce": 176332,
         "miningTime": 7.199
+    },
+    {
+        "index": 48,
+        "timestamp": "Tue Mar 05 2024 11:43:49 GMT+0600 (Bangladesh Standard Time)",
+        "data": {
+            "tempData": {
+                "temperature": 25.5,
+                "humidity": 50.2
+            },
+            "timestamp": "2024-03-05T05:43:49.203Z"
+        },
+        "serverHash": "af6f58cf59dee8c3d968827cb6c68cd505a239060095d4d79e6b3be767b6ac65",
+        "previousHash": "00003f91516fb65732ccdae3e4e0a2d809793416e3c8f6aa1a6a2b7caa9949f0",
+        "hash": "00006ba332503bbcbe48a22357dfb218de0f10c3d6e8278fe76d1fd854ab9d83",
+        "nonce": 77262,
+        "miningTime": 5.129
+    },
+    {
+        "index": 49,
+        "timestamp": "Thu Mar 14 2024 01:31:21 GMT+0600 (Bangladesh Standard Time)",
+        "data": {
+            "tempData": {
+                "temperature": 29.29999924,
+                "humidity": 93,
+                "Vibration": "Vibration not detected"
+            },
+            "timestamp": "2024-03-13T19:31:21.562Z"
+        },
+        "serverHash": "af6f58cf59dee8c3d968827cb6c68cd505a239060095d4d79e6b3be767b6ac65",
+        "previousHash": "00006ba332503bbcbe48a22357dfb218de0f10c3d6e8278fe76d1fd854ab9d83",
+        "hash": "000018326b55eed3ba9fb4340818d99d4dac1ad262bbfb8b6e40857790558066",
+        "nonce": 1031,
+        "miningTime": 0.034
+    },
+    {
+        "index": 50,
+        "timestamp": "Thu Mar 14 2024 01:31:22 GMT+0600 (Bangladesh Standard Time)",
+        "data": {
+            "tempData": {
+                "temperature": 29.29999924,
+                "humidity": 93,
+                "Vibration": "Vibration not detected"
+            },
+            "timestamp": "2024-03-13T19:31:22.748Z"
+        },
+        "serverHash": "af6f58cf59dee8c3d968827cb6c68cd505a239060095d4d79e6b3be767b6ac65",
+        "previousHash": "000018326b55eed3ba9fb4340818d99d4dac1ad262bbfb8b6e40857790558066",
+        "hash": "000064194ff49d1ad085c7cc7e87c2493dd85fba66433b5184fa77a5845f3645",
+        "nonce": 47538,
+        "miningTime": 0.921
+    },
+    {
+        "index": 51,
+        "timestamp": "Thu Mar 14 2024 01:31:24 GMT+0600 (Bangladesh Standard Time)",
+        "data": {
+            "tempData": {
+                "temperature": 29.29999924,
+                "humidity": 93,
+                "Vibration": "Vibration not detected"
+            },
+            "timestamp": "2024-03-13T19:31:24.826Z"
+        },
+        "serverHash": "af6f58cf59dee8c3d968827cb6c68cd505a239060095d4d79e6b3be767b6ac65",
+        "previousHash": "000064194ff49d1ad085c7cc7e87c2493dd85fba66433b5184fa77a5845f3645",
+        "hash": "0000dbc743c35e16c528b50666bbcb45a0d2a5c7c111ae84b8665f2169a2610e",
+        "nonce": 31945,
+        "miningTime": 0.596
+    },
+    {
+        "index": 52,
+        "timestamp": "Thu Mar 14 2024 01:32:18 GMT+0600 (Bangladesh Standard Time)",
+        "data": {
+            "tempData": {
+                "temperature": 29.29999924,
+                "humidity": 91,
+                "Vibration": "Vibration not detected"
+            },
+            "timestamp": "2024-03-13T19:32:18.348Z"
+        },
+        "serverHash": "af6f58cf59dee8c3d968827cb6c68cd505a239060095d4d79e6b3be767b6ac65",
+        "previousHash": "0000dbc743c35e16c528b50666bbcb45a0d2a5c7c111ae84b8665f2169a2610e",
+        "hash": "0000f9293556e9efcaf34947b847853eb18d16e29b7d653b2b9a14facefa41a4",
+        "nonce": 177471,
+        "miningTime": 3.283
+    },
+    {
+        "index": 53,
+        "timestamp": "Thu Mar 14 2024 01:32:23 GMT+0600 (Bangladesh Standard Time)",
+        "data": {
+            "tempData": {
+                "temperature": 29.29999924,
+                "humidity": 91,
+                "Vibration": "Vibration not detected"
+            },
+            "timestamp": "2024-03-13T19:32:23.071Z"
+        },
+        "serverHash": "af6f58cf59dee8c3d968827cb6c68cd505a239060095d4d79e6b3be767b6ac65",
+        "previousHash": "0000f9293556e9efcaf34947b847853eb18d16e29b7d653b2b9a14facefa41a4",
+        "hash": "0000bc79b678d69ce8868280ed7db384917986837f8d238720c4e91ac5dbb6a3",
+        "nonce": 343380,
+        "miningTime": 6.465
+    },
+    {
+        "index": 54,
+        "timestamp": "Thu Mar 14 2024 01:32:32 GMT+0600 (Bangladesh Standard Time)",
+        "data": {
+            "tempData": {
+                "temperature": 29.29999924,
+                "humidity": 90,
+                "Vibration": "Vibration not detected"
+            },
+            "timestamp": "2024-03-13T19:32:32.550Z"
+        },
+        "serverHash": "af6f58cf59dee8c3d968827cb6c68cd505a239060095d4d79e6b3be767b6ac65",
+        "previousHash": "0000bc79b678d69ce8868280ed7db384917986837f8d238720c4e91ac5dbb6a3",
+        "hash": "00005b31a1638250a9a101d331dcad7fa7aae091e9a14e56dfcb107a746bcb37",
+        "nonce": 7245,
+        "miningTime": 0.15
+    },
+    {
+        "index": 55,
+        "timestamp": "Thu Mar 14 2024 01:32:33 GMT+0600 (Bangladesh Standard Time)",
+        "data": {
+            "tempData": {
+                "temperature": 29.29999924,
+                "humidity": 90,
+                "Vibration": "Vibration not detected"
+            },
+            "timestamp": "2024-03-13T19:32:33.853Z"
+        },
+        "serverHash": "af6f58cf59dee8c3d968827cb6c68cd505a239060095d4d79e6b3be767b6ac65",
+        "previousHash": "00005b31a1638250a9a101d331dcad7fa7aae091e9a14e56dfcb107a746bcb37",
+        "hash": "00008b29e4bbcd39ad5d3953666e16771792e11d272f62eadf96bc9dab81eef3",
+        "nonce": 50714,
+        "miningTime": 0.952
+    },
+    {
+        "index": 56,
+        "timestamp": "Thu Mar 14 2024 01:32:36 GMT+0600 (Bangladesh Standard Time)",
+        "data": {
+            "tempData": {
+                "temperature": 29.29999924,
+                "humidity": 90,
+                "Vibration": "Vibration not detected"
+            },
+            "timestamp": "2024-03-13T19:32:36.028Z"
+        },
+        "serverHash": "af6f58cf59dee8c3d968827cb6c68cd505a239060095d4d79e6b3be767b6ac65",
+        "previousHash": "00008b29e4bbcd39ad5d3953666e16771792e11d272f62eadf96bc9dab81eef3",
+        "hash": "00005bff86a4a4fe8d309bda9d3ca0831240ba7069a9d96189dc89ab531e3e1a",
+        "nonce": 29528,
+        "miningTime": 0.648
+    },
+    {
+        "index": 57,
+        "timestamp": "Thu Mar 14 2024 01:39:03 GMT+0600 (Bangladesh Standard Time)",
+        "data": {
+            "tempData": {
+                "temperature": 28.89999962,
+                "humidity": 89,
+                "Vibration": "Vibration not detected"
+            },
+            "timestamp": "2024-03-13T19:39:03.511Z"
+        },
+        "serverHash": "af6f58cf59dee8c3d968827cb6c68cd505a239060095d4d79e6b3be767b6ac65",
+        "previousHash": "00005bff86a4a4fe8d309bda9d3ca0831240ba7069a9d96189dc89ab531e3e1a",
+        "hash": "000007a51397fe8c9ca4243ee960402195f0e2b6570335e2aba1b452bf5a1a33",
+        "nonce": 167632,
+        "miningTime": 3.177
+    },
+    {
+        "index": 58,
+        "timestamp": "Thu Mar 14 2024 01:39:16 GMT+0600 (Bangladesh Standard Time)",
+        "data": {
+            "tempData": {
+                "temperature": 28.89999962,
+                "humidity": 89,
+                "Vibration": "Vibration not detected"
+            },
+            "timestamp": "2024-03-13T19:39:16.429Z"
+        },
+        "serverHash": "af6f58cf59dee8c3d968827cb6c68cd505a239060095d4d79e6b3be767b6ac65",
+        "previousHash": "000007a51397fe8c9ca4243ee960402195f0e2b6570335e2aba1b452bf5a1a33",
+        "hash": "000065ca76a11e16f4d5a722c022934ef92d19e08fb7aa1678ade2020dba3bd4",
+        "nonce": 8379,
+        "miningTime": 0.183
+    },
+    {
+        "index": 59,
+        "timestamp": "Thu Mar 14 2024 01:39:28 GMT+0600 (Bangladesh Standard Time)",
+        "data": {
+            "tempData": {
+                "temperature": 28.89999962,
+                "humidity": 95,
+                "Vibration": "Vibration detected"
+            },
+            "timestamp": "2024-03-13T19:39:28.882Z"
+        },
+        "serverHash": "af6f58cf59dee8c3d968827cb6c68cd505a239060095d4d79e6b3be767b6ac65",
+        "previousHash": "000065ca76a11e16f4d5a722c022934ef92d19e08fb7aa1678ade2020dba3bd4",
+        "hash": "00006a32f6331d1ce11fb400d1164a55f304f5bd0c139b9d8a2a672c35883bb4",
+        "nonce": 37890,
+        "miningTime": 0.748
+    },
+    {
+        "index": 60,
+        "timestamp": "Thu Mar 14 2024 01:41:38 GMT+0600 (Bangladesh Standard Time)",
+        "data": {
+            "tempData": {
+                "temperature": 28.89999962,
+                "humidity": 89,
+                "Vibration": "Vibration not detected"
+            },
+            "timestamp": "2024-03-13T19:41:38.822Z"
+        },
+        "serverHash": "af6f58cf59dee8c3d968827cb6c68cd505a239060095d4d79e6b3be767b6ac65",
+        "previousHash": "00006a32f6331d1ce11fb400d1164a55f304f5bd0c139b9d8a2a672c35883bb4",
+        "hash": "000061b5006ca992654479b31acf3089f299825c718b16ce295827a4ed99374f",
+        "nonce": 16335,
+        "miningTime": 0.317
+    },
+    {
+        "index": 61,
+        "timestamp": "Thu Mar 14 2024 01:41:42 GMT+0600 (Bangladesh Standard Time)",
+        "data": {
+            "tempData": {
+                "temperature": 28.89999962,
+                "humidity": 90,
+                "Vibration": "Vibration not detected"
+            },
+            "timestamp": "2024-03-13T19:41:42.212Z"
+        },
+        "serverHash": "af6f58cf59dee8c3d968827cb6c68cd505a239060095d4d79e6b3be767b6ac65",
+        "previousHash": "000061b5006ca992654479b31acf3089f299825c718b16ce295827a4ed99374f",
+        "hash": "00008b54d80eb4074e5ad809baadd0c284ae3a5724cfe07906464e19474e03ba",
+        "nonce": 91167,
+        "miningTime": 1.471
     }
 ]

@@ -139,7 +139,7 @@ app.get("/last-block-index", (req, res) => {
 app.post("/", (req, res) => {
   const tempData = req.body; // Assuming JSON data contains temperature and humidity
 
-  const dataToSave = { data: tempData, timestamp: new Date() };
+  const dataToSave = { tempData, timestamp: new Date() };
 
   const blockIndex = edgeCoin.chain.length; // Determine the index correctly based on the chain length
 
