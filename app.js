@@ -4,7 +4,12 @@ const cors = require("cors"); // Import the 'cors' package
 const Blockchain = require("./conroller/main");
 const Block = require("./conroller/block"); // Import Block class from controller/block.js
 
+
+
 const app = express();
+
+// monitoring cpu, memory, and other system information
+app.use(require('express-status-monitor')());
 
 app.use(bodyParser.json());
 app.use(cors()); // Use CORS middleware
@@ -13,7 +18,7 @@ app.use(cors()); // Use CORS middleware
 let edgeCoin = new Blockchain();
 
 app.get("/", (req, res) => {
-  res.send("Hello From Zishan!");
+  res.send("Hello From BlockChain!");
 });
 
 // Get all block information
@@ -134,7 +139,60 @@ app.get("/last-block-index", (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Error reading blockchain data" });
   }
-})
+});
+
+app.get("/average-temperature-humidity", (req, res) => {
+  try {
+    const twentyFourHoursAgo = new Date();
+    twentyFourHoursAgo.setDate(twentyFourHoursAgo.getDate() - 1); // Calculate 24 hours ago
+
+    const relevantBlocks = edgeCoin.chain.filter(block => new Date(block.timestamp) > twentyFourHoursAgo); // Filter blocks within the last 24 hours
+
+    let totalTemperature = 0;
+    let totalHumidity = 0;
+    let blockCount = 0;
+    let vibrationTrueCount = 0;
+    let vibrationFalseCount = 0;
+    let totalVibrationValue=0;
+    let totalBlocks=relevantBlocks.length-1;
+
+    relevantBlocks.forEach(block => {
+      if (block.data && block.data.tempData && typeof block.data.tempData.temperature === 'number' && !isNaN(block.data.tempData.temperature)) {
+        totalTemperature += block.data.tempData.temperature;
+      }
+      if (block.data && block.data.tempData && typeof block.data.tempData.humidity === 'number' && !isNaN(block.data.tempData.humidity)) {
+        totalHumidity += block.data.tempData.humidity;
+      }
+      if (block.data && block.data.tempData && block.data.tempData.vibration ) {
+        if (block.data.tempData.vibration.toLowerCase() === 'true') {
+          vibrationTrueCount++;
+        } else if (block.data.tempData.vibration.toLowerCase() === 'false') {
+          vibrationFalseCount++;
+        }
+      }
+      if (block.data && block.data.tempData && block.data.tempData.vibrationValue) {
+        totalVibrationValue += block.data.tempData.vibrationValue;
+      }
+      blockCount++;
+    });
+
+    const averageTemperature = blockCount > 0 ? (totalTemperature / blockCount).toFixed(2) : 0;
+    const averageHumidity = blockCount > 0 ? (totalHumidity / blockCount).toFixed(2) : 0;
+    const averageVibrationValue = blockCount > 0 ? (totalVibrationValue / blockCount).toFixed(2) : 0;
+
+    res.status(200).json({
+      totalBlocks,
+      averageTemperature,
+      averageHumidity,
+      vibrationTrueCount,
+      vibrationFalseCount,
+      averageVibrationValue
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Error calculating average temperature, humidity, and vibration count" });
+  }
+});
+
 
 app.post("/", (req, res) => {
   const tempData = req.body; // Assuming JSON data contains temperature and humidity
