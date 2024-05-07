@@ -233,6 +233,7 @@ app.get("/average-temperature-humidity", (req, res) => {
       blockCount > 0 ? (totalVibrationValue / blockCount).toFixed(2) : 0;
 
     res.status(200).json({
+      date: (new Date()).toString(),
       totalBlocks,
       averageTemperature,
       averageHumidity,
